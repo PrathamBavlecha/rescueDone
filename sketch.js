@@ -144,7 +144,7 @@ if(health<=0){
 }
 spawnEnemy()
 if(wave === 1){
-if(enemiesKilled>20){
+if(enemiesKilled>1){
   wave = 2
 }
 }
@@ -155,7 +155,7 @@ if(wave===2){
   wave = 2
   spawnEnemy2()
   if(wave===2){
-    if(enemiesKilled>30){
+    if(enemiesKilled>1){
       gameState = "won"
       win.play()
     }

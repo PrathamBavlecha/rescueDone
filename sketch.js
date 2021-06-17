@@ -11,6 +11,7 @@ var wave = 1
 function preload(){
   heroIdle = loadAnimation("Sprites/idle/adventurer-idle-00.png","Sprites/idle/adventurer-idle-01.png","Sprites/idle/adventurer-idle-02.png")
   enemyPurple = loadAnimation("Enemy/style_A/PNG/frame0000.png","Enemy/style_A/PNG/frame0001.png","Enemy/style_A/PNG/frame0002.png","Enemy/style_A/PNG/frame0003.png","Enemy/style_A/PNG/frame0004.png")
+  enemyGreen = loadAnimation("Enemy/style_B/PNG/frame0000.png","Enemy/style_B/PNG/frame0001.png","Enemy/style_B/PNG/frame0002.png","Enemy/style_B/PNG/frame0003.png","Enemy/style_B/PNG/frame0004.png")
   backgroundIMG = loadImage("Sprites/backgrounds/background.jpg")
   heroRun = loadAnimation("Sprites/run/adventurer-run-00.png","Sprites/run/adventurer-run-01.png","Sprites/run/adventurer-run-02.png","Sprites/run/adventurer-run-03.png","Sprites/run/adventurer-run-04.png","Sprites/run/adventurer-run-05.png")
   bulletIMG = loadImage("bullet.png")
@@ -211,7 +212,6 @@ function shoot(){
 function spawnEnemy(){
   if(frameCount%100===0){
    var enemy = createSprite(0,Math.round(random(0,displayHeight-200)),10,10)
-   enemy.debug = true
    enemy.setCollider("rectangle",0,0,20,20)
    if(Math.random(0,1)>0.5){
      enemy.x = 0

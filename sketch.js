@@ -234,10 +234,10 @@ function spawnEnemy(){
      enemy2.setCollider("rectangle",0,0,30,30)
      if(Math.random(0,1)>0.5){
        enemy2.y = 0
-       enemy2.velocityY = 5
+       enemy2.velocityY = 7
       }else{
        enemy2.y = displayHeight
-       enemy2.velocityY = -5
+       enemy2.velocityY = -7
      }
      enemy2.lifetime = 400
      enemy2.scale = 3

@@ -42,6 +42,9 @@ function setup() {
   info = createSprite(displayWidth/2,displayHeight/2+100,50,50)
   info.addImage("Info",infoIMG)
   info.visible = false
+   rescue = createSprite(displayWidth/2,displayHeight/4,50,50)
+   rescue.addImage("rescue",rescueIMG)
+   rescue.scale = 4
 }
 
 function draw() {
@@ -50,9 +53,6 @@ function draw() {
  if(gameState==="menu"){
    play.visible = true
    info.visible = true
-   rescue = createSprite(displayWidth/2,displayHeight/4,50,50)
-   rescue.addImage("rescue",rescueIMG)
-   rescue.scale = 4
 
    if(mousePressedOver(play)){
     gameState="stage 1"
@@ -96,7 +96,7 @@ textFont("Garamond")
    text("Wave:"+wave,displayWidth/2,50)
 
    hero.visible = true
-   rescue.destroy()
+   rescue.visible = false
 
  if(mouseX-hero.x < 400 && hero.x-mouseX < 400){
  hero.velocityX = (mouseX - hero.x) * 7
